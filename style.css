@@ -1,8 +1,80 @@
-.checked{
-    background-color: rgba(198, 0, 40, 0.397);
+.checked {
+    background-color: #4caf50;
     text-decoration: line-through;
 }
 
-.blockDelBtn{
+/* .blockDelBtn{
     display: none;
+} */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.inputsection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.send {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.send:hover {
+    background-color: #45a049;
+}
+
+.allTodos {
+    text-align: center;
+}
+
+.lists {
+    list-style: none;
+    padding: 0;
+}
+
+#delbutton {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.blockDelBtn:hover {
+    background-color: #d32f2f;
 }

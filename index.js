@@ -22,7 +22,7 @@ const newList = (text, place)=>{
     list.innerText = text;
     addCB(list)
     place.appendChild(list)
-    addDelBtn(list, text)
+    addDelBtn(list)
     
 }
 
@@ -37,19 +37,27 @@ const addCB = (elem)=>{
 const addDelBtn = (elem)=>{
     const button = document.createElement('button');
     button.innerText="DELETE"
+    button.setAttribute('id','delBtn');
+    button.classList.add('blockDelBtn')
     elem.appendChild(button);
 }
 
-//when clicked delete button
 lists.addEventListener('click',(evt)=>{
+    //when clicked delete button
     if(evt.target.tagName === 'BUTTON'){
      const deletedLi = evt.target.closest('li');
     deletedLi.remove()
     }
 
+    //when clicked checkbox
     if(evt.target.tagName === 'INPUT'){
         const checkedLI = evt.target.closest('li');
-        const delBtn = evt.target.closest('button');
         checkedLI.classList.toggle('checked')
+        // const delBtns = document.querySelectorAll('#delBtn');
+        // for(let delBtn of delBtns){
+        //     if(delBtn.classList.contains('blockDelBtn')){
+        //         delBtn.classList.toggle('blockDelBtn')
+        //     }
+        // }
     }
  })
